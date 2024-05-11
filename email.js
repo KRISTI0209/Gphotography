@@ -8,17 +8,26 @@ function emailSend() {
     message: userMessage,
   };
 
-  emailjs.send("service_6maur7m", "template_b1ugsif", params).then(
+  if (userName == "" || userEmail == "" || userMessage == "") {
     Swal.fire({
-      position: "top-end",
-      icon: "success",
-      title: "Email Sent",
-      text: "I will contact you on your provided email!",
-      showConfirmButton: false,
-      timer: 2500,
-    })
-  );
-  const reset = document.getElementById("form").reset();
+      title: "Invalid input",
+      text: "Did you forgot to provide some info?",
+      icon: "error",
+      confirmButtonText: "Close",
+    });
+  } else {
+    emailjs.send("service_6maur7m", "template_b1ugsif", params).then(
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Email Sent",
+        text: "I will contact you on your provided email!",
+        showConfirmButton: false,
+        timer: 2500,
+      })
+    );
+    const reset = document.getElementById("form").reset();
+  }
 }
 
 // !! dasamtavrebelia validatorebi

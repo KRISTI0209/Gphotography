@@ -2,7 +2,7 @@ body {
   margin: 0px;
   padding: 0px;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
   background: linear-gradient(to right, hsl(0, 0%, 0%), #171821, #03040d);
 }
 
@@ -32,6 +32,7 @@ header {
 }
 
 header nav div.container-fluid a.hoverEffect {
+  font-weight: 900;
   transition: ease-out 0.5s;
 }
 
@@ -107,4 +108,102 @@ textarea {
 
 [class^="swal2"] {
   color: white;
+}
+
+.fontWeight {
+  font-weight: 900;
+  user-select: none;
+}
+
+.welcome {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Roboto", "sans-serif";
+}
+
+@media (max-width: 1440px) {
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imgs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    padding-top: 20%;
+    grid-template-columns: repeat(3, 0fr);
+  }
+  header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%; /* Adjust width as needed */
+  }
+}
+
+@media (max-width: 1024px) {
+  .imgs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 0fr);
+    margin-left: 8%;
+    margin-top: 30%;
+  }
+
+  .image {
+    width: 280px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .imgs {
+    display: grid;
+    width: 88%;
+    grid-template-columns: repeat(2, 0fr);
+    padding-top: 70%;
+  }
+
+  .image {
+    width: 280px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 425px) {
+  .imgs {
+    display: grid;
+    width: 88%;
+    grid-template-columns: repeat(1, 0fr);
+    padding-top: 1450px;
+  }
+
+  .image {
+    width: 280px;
+    height: 250px;
+  }
+
+  .inputStyle {
+    width: 300px;
+  }
+}
+
+@media (max-width: 320px) {
+  .imgs {
+    display: grid;
+    width: 88%;
+    grid-template-columns: repeat(1, 0fr);
+    padding-top: 1470px;
+  }
+
+  .image {
+    width: 280px;
+    height: 250px;
+  }
 }
