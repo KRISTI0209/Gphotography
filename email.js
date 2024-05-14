@@ -29,5 +29,3 @@ function emailSend() {
     const reset = document.getElementById("form").reset();
   }
 }
-
-// !! dasamtavrebelia validatorebi
