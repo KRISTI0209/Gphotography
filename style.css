@@ -64,6 +64,7 @@ input:focus {
 }
 
 form {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
 }
